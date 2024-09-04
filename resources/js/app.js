@@ -1,26 +1,13 @@
-import './bootstrap';
+import './bootstrap'
 
 import '../css/app.css'
 
-import { createApp, h } from 'vue';
-import { createInertiaApp } from '@inertiajs/vue3';
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-// import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import { createApp } from 'vue/dist/vue.esm-bundler'
+import { h, ref } from 'vue'
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+console.log('Initializing Vue App...')
 
-console.log('Initializing Inertia App...')
-
-createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(`./Components/${name}.vue`, import.meta.glob('./Components/**/*.vue')),
-    setup({ el, App, props, plugin }) {
-        return createApp({ render: () => h(App, props) })
-            .use(plugin)
-            // .use(ZiggyVue)
-            .mount(el);
-    },
-    progress: {
-        color: '#4B5563',
-    },
-});
+const name = 'TestComponent'
+const pageComponent = await resolvePageComponent(`./Components/${name}.vue`, import.meta.glob('./Components/**/*.vue'))
+createApp(pageComponent.default).mount('#vue-component')
