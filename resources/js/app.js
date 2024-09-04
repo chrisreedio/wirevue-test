@@ -11,6 +11,6 @@ window.loadVueComponent = async function (name, props, divId) {
     console.log('Props:', props)
     const pageComponent = await resolvePageComponent(`./Components/${name}.vue`, import.meta.glob('./Components/**/*.vue'))
     createApp({
-        render: () => h(pageComponent.default, {...props.value}),
+        render: () => h(pageComponent.default, {...props}),
     }).mount(divId)
 }
