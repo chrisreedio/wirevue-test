@@ -1,11 +1,14 @@
 <div>
-    <div id="vue-component" />
+    <div id="wirevue-{{ $component_id }}" />
 
     {{--@vue('TestComponent', ['name' => 'Filament'])--}}
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
-            window.loadVueComponent('{{ $component }}', {!! json_encode($props, JSON_UNESCAPED_SLASHES) !!}, '#vue-component')
+            window.loadVueComponent(
+                '{{ $component }}',
+                {!! json_encode($props, JSON_UNESCAPED_SLASHES) !!},
+                '#wirevue-{{ $component_id }}')
         })
     </script>
 </div>

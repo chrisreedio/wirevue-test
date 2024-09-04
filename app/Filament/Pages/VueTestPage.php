@@ -2,6 +2,8 @@
 
 namespace App\Filament\Pages;
 
+use Filament\Actions\Action;
+use Filament\Notifications\Notification;
 use Filament\Pages\Page;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\View\View;
@@ -15,7 +17,24 @@ class VueTestPage extends Page
 
     public function getTitle(): string | Htmlable
     {
-        return '';
+        return 'Vue Test Page';
+    }
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Action::make('test')
+                ->label('Test')
+                ->icon('heroicon-o-document-text')
+                ->color('info')
+                ->action(function () {
+                    Notification::make()
+                        ->title('Test')
+                        ->body('Test')
+                        ->success()
+                        ->send();
+                }),
+        ];
     }
 
     public function render(): View
