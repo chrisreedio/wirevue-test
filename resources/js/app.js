@@ -8,6 +8,14 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
 
 console.log('Initializing Vue App...')
 
+window.getComponentName = function() {
+    return 'TestComponent'
+}
 const name = 'TestComponent'
 const pageComponent = await resolvePageComponent(`./Components/${name}.vue`, import.meta.glob('./Components/**/*.vue'))
-createApp(pageComponent.default).mount('#vue-component')
+// createApp(pageComponent.default).mount('#vue-component')
+const myProps = ref({name: 'John Doe', php_version: '8.555.0'})
+// const app = createApp({
+//     render: () => h(pageComponent.default, {...myProps.value}),
+// }).mount('#vue-component')
+
