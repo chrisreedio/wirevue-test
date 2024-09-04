@@ -13,7 +13,7 @@ setInterval(() => {
 </script>
 <template>
     <div>
-        <h1>This is a Vue page powered by Inertia.js in Filament!!!! 🚀</h1>
+        <h1 class="text-red-500">This is a Vue page powered by Inertia.js in Filament!!!! 🚀</h1>
         <h3>Counter: {{ counter }}</h3>
         <!--<p v-if="user">Welcome, {{ user.name }}!</p>-->
         <!--<p v-else>Not Logged in</p>-->
