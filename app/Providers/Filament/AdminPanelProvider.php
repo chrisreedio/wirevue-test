@@ -17,9 +17,28 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Support\Facades\FilamentView;
+use Filament\View\PanelsRenderHook;
+use Illuminate\Contracts\View\View;
+use function view;
 
 class AdminPanelProvider extends PanelProvider
 {
+    public function register(): void
+    {
+        parent::register();
+
+        FilamentView::registerRenderHook(
+            PanelsRenderHook::HEAD_END,
+            fn (): View => view('support.filavue.head'),
+        );
+
+        // FilamentView::registerRenderHook(
+        //     PanelsRenderHook::BODY_START,
+        //     fn (): View => view('support.filavue.body'),
+        // );
+    }
+
     public function panel(Panel $panel): Panel
     {
         return $panel
