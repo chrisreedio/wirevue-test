@@ -1,26 +1,24 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { usePage } from '@inertiajs/vue3'
 import SmallComponent from './SmallComponent.vue'
+import Counter from './Counter.vue'
 
 const page = usePage()
 // const user = computed(() => page.props.auth.user)
 
 defineProps({php_version: String})
-const counter = ref(0)
+
 const clicked = ref(0)
-setInterval(() => {
-    counter.value++
-}, Math.floor(Math.random() * 1000))
+
 </script>
 <template>
     <div class="border-2 border-blue-500 my-4 px-2 py-4">
         <h1 class="text-green-500">This is a Vue Component in Filament!!!! 🚀</h1>
-        <h3>Counter: {{ counter }}</h3>
         <p>PHP Version: {{ php_version }}</p>
         <!--<p v-if="user">Welcome, {{ user.name }}!</p>-->
         <!--<p v-else>Not Logged in</p>-->
-
+        <Counter />
         <SmallComponent />
 
         <button @click="clicked++"
