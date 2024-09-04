@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/js/vue.js',
                 'resources/css/filament/admin/theme.css',
                 'resources/js/Components/**/*.js',
+                'resources/views/**/*.blade.php',
             ],
             refresh: true,
         }),
