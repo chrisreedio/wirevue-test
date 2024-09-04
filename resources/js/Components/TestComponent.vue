@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { usePage } from '@inertiajs/vue3'
+import SmallComponent from './SmallComponent.vue'
 
 const page = usePage()
 // const user = computed(() => page.props.auth.user)
@@ -18,6 +19,8 @@ setInterval(() => {
         <h3>Counter: {{ counter }}</h3>
         <!--<p v-if="user">Welcome, {{ user.name }}!</p>-->
         <!--<p v-else>Not Logged in</p>-->
+
+        <SmallComponent />
 
         <button @click="clicked++">Clicked {{ clicked }} times</button>
         <hr>
