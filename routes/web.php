@@ -12,8 +12,7 @@ Route::get('/vue', function () {
 });
 
 Route::get('/inertia', function () {
-    // return view('inertia');
     return Inertia::render('Index', [
-        'php_version' => '8.2',
+        'php_version' => phpversion(),
     ]);
 });

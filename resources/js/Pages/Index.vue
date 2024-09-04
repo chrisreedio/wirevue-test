@@ -1,6 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { usePage } from '@inertiajs/vue3'
 
+const page = usePage()
+const user = computed(() => page.props.auth.user)
+
+defineProps({php_version: String})
 const counter = ref(0)
 setInterval(() => {
     counter.value++
@@ -10,5 +15,11 @@ setInterval(() => {
     <div>
         <h1>This is a Vue page powered by Inertia.js!</h1>
         <h3>Counter: {{ counter }}</h3>
+        <p v-if="user">Welcome, {{ user.name }}!</p>
+        <p v-else>Not Logged in</p>
+
+        <hr>
+        <p>PHP Version: {{ php_version }}</p>
+
     </div>
 </template>
