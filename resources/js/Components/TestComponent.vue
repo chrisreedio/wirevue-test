@@ -7,6 +7,7 @@ const page = usePage()
 
 defineProps({php_version: String})
 const counter = ref(0)
+const clicked = ref(0)
 setInterval(() => {
     counter.value++
 }, 1000)
@@ -18,6 +19,7 @@ setInterval(() => {
         <!--<p v-if="user">Welcome, {{ user.name }}!</p>-->
         <!--<p v-else>Not Logged in</p>-->
 
+        <button @click="clicked++">Clicked {{ clicked }} times</button>
         <hr>
         <p>PHP Version: {{ php_version }}</p>
 
