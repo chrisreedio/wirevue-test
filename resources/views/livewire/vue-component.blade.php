@@ -5,9 +5,7 @@
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
-            window.loadVueComponent('TestComponent', {
-                name: 'Filament',
-            }, '#vue-component')
+            window.loadVueComponent('{{ $component }}', {!! json_encode($props, JSON_UNESCAPED_SLASHES) !!}, '#vue-component')
         })
     </script>
 </div>
