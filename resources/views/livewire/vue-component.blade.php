@@ -3,12 +3,15 @@
 
     {{--@vue('TestComponent', ['name' => 'Filament'])--}}
 
-    @script
-    <script>
-        window.loadVueComponent(
-            '{{ $component }}',
-            {!! json_encode(array_merge($page, $props), JSON_UNESCAPED_SLASHES) !!},
-            '#wirevue-{{ $component_id }}')
+    {{--    @script--}}
+    {{--    <script>--}}
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            window.loadVueComponent(
+                '{{ $component }}',
+                {!! json_encode(array_merge($page, $props), JSON_UNESCAPED_SLASHES) !!},
+                '#wirevue-{{ $component_id }}')
+        })
     </script>
-    @endscript
+    {{--    @endscript--}}
 </div>

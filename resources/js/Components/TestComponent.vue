@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { usePage } from '@inertiajs/vue3'
 import SmallComponent from './SmallComponent.vue'
 import Counter from './Counter.vue'
+import EventTest from './EventTest.vue'
 
 const page = usePage()
 // const user = computed(() => page.props.auth.user)
@@ -20,6 +21,7 @@ const clicked = ref(0)
         <!--<p v-else>Not Logged in</p>-->
         <Counter />
         <SmallComponent />
+        <EventTest />
 
         <button @click="clicked++"
                 class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">

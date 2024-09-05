@@ -28,6 +28,18 @@ class VueTestPage extends Page
                 ->icon('heroicon-o-document-text')
                 ->color('info')
                 ->action(function () {
+                    $this->js(<<<JS
+                            console.log('Sending Event to Vue')
+                            const message = 'Hello from Laravel';
+                            // Create and dispatch a custom event
+                            const event = new CustomEvent('laravel-message', {
+                                detail: message
+                            })
+                            window.dispatchEvent(event);
+                        JS
+                    );
+
+
                     Notification::make()
                         ->title('Test')
                         ->body('Test')
