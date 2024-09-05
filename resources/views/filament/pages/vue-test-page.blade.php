@@ -5,9 +5,10 @@
         {{--<livewire:vue-component component="TestComponent" :props="$props" />--}}
         <!--<livewire:vue-component component="TestComponent"  />
         <livewire:vue-component component="TestStoreComponent" />
-        <livewire:vue-component component="TestStoreComponent" />
+
         <livewire:vue-component component="TestComponent" :props="['type' => 'user']" />-->
-     
+
+        <livewire:vue-component component="TestStoreComponent" />     
         <livewire:vue-component component="VirtualScroller" />
         <livewire:vue-component component="Chart" />
         <livewire:vue-component component="Tags" />
