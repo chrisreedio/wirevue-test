@@ -18,6 +18,8 @@
     },
     "dependencies": {
         "@inertiajs/vue3": "^1.2.0",
+        "typescript": "^5.5.3",
+        "vue-tsc": "^2.0.24",
         "@meilisearch/instant-meilisearch": "^0.20.0",
         "@primevue/themes": "^4.0.5",
         "chart.js": "^4.4.4",

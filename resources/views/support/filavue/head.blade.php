@@ -1,4 +1,4 @@
-@vite('resources/js/app.js')
+@vite('resources/js/app.ts')
 
 {{--Setup Vue--}}
 {{--@php--}}

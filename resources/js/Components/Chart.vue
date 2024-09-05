@@ -1,6 +1,21 @@
-<script setup>
+<script setup lang="ts">
 import Chart from "primevue/chart";
 import { ref, onMounted } from "vue";
+
+type ChartData = {
+    labels: string[];
+    datasets: {
+        label: string;
+        data: number[];
+        backgroundColor: string[];
+        borderColor: string[];
+        borderWidth: number;
+    }[];
+};
+const props = defineProps<{
+    php_version: string;
+    data: ChartData;
+}>();
 
 onMounted(() => {
     chartData.value = setChartData();

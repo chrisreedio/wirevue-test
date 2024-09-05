@@ -7,10 +7,10 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
-                'resources/js/app.js',
-                'resources/js/vue.js',
+                'resources/js/app.ts',
+                'resources/js/vue.ts',
                 'resources/css/filament/admin/theme.css',
-                'resources/js/Components/**/*.js',
+                'resources/js/Components/**/*.ts',
                 'resources/views/**/*.blade.php',
             ],
             refresh: true,
