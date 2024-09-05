@@ -2,11 +2,10 @@ import { instantMeiliSearch } from "@meilisearch/instant-meilisearch";
 
 export function useMeilisearch() {
     function hello() {
-        console.log('hello from composable')
+        console.log("hello from composable", window);
     }
-
 
     return {
         hello,
-    }
+    };
 }

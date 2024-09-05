@@ -10,7 +10,7 @@ export default defineConfig({
                 'resources/js/app.ts',
                 'resources/js/vue.ts',
                 'resources/css/filament/admin/theme.css',
-                'resources/js/Components/**/*.ts',
+                'resources/js/**/*.ts',
                 'resources/views/**/*.blade.php',
             ],
             refresh: true,
