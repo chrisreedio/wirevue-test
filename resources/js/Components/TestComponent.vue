@@ -13,7 +13,7 @@ const clicked = ref(0)
 
 </script>
 <template>
-    <div class="border-2 border-blue-500 my-4 px-2 py-4">
+    <div class="border-2 border-blue-500 px-2 py-4">
         <h1 class="text-green-500">This is a Vue Component in Filament!!!! 🚀</h1>
         <p>PHP Version: {{ php_version }}</p>
         <!--<p v-if="user">Welcome, {{ user.name }}!</p>-->
