@@ -32,9 +32,6 @@ window.$inductor.loadVueComponent = async function (name, props, divId) {
             preset: Aura,
         },
     });
-    // Global Prime Vue Components
-    //app.component('Button', Button);
-    //app.component('Chip', Chip);
 
     // Mount
     app.mount(divId);
