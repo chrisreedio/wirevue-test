@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import { useMeilisearch } from "../Composables/useMeilisearch";
+
 function notify() {
     const notification = new window.FilamentNotification()
         .title(`Hello Filament Notification from Vue`)
@@ -7,6 +9,10 @@ function notify() {
         .send();
 }
 const clicked = ref(0);
+
+const { hello } = useMeilisearch();
+
+hello();
 </script>
 <template>
     <div class="flex space-x-2">
