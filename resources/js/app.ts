@@ -15,8 +15,6 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
-window.$inductor = window.$inductor || {};
-
 window.$inductor.loadVueComponent = async function (name, props, divId) {
     console.log("Initializing Vue Component:", name);
     console.log("Props:", props);
