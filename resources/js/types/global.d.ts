@@ -4,6 +4,7 @@ import { AxiosInstance } from "axios";
 declare global {
     interface Window {
         axios: AxiosInstance;
+        FilamentNotification: any;
         $inductor: {
             loadVueComponent: (
                 name: any,

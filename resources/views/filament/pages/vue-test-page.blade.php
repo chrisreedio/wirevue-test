@@ -9,9 +9,10 @@
         <livewire:vue-component component="TestComponent" :props="['type' => 'user']" />-->
 
         <livewire:vue-component component="TestStoreComponent" />     
-        <livewire:vue-component component="VirtualScroller" />
-        <livewire:vue-component component="Chart" />
-        <livewire:vue-component component="Tags" />
+        <livewire:vue-component component="InstantSearch" />  
+        {{-- <livewire:vue-component component="VirtualScroller" /> -- }}
+        {{-- <livewire:vue-component component="Chart" /> -- }}
+        {{-- <livewire:vue-component component="Tags" /> --}}
         {{--<hr />--}}
         {{--<livewire:vue-component component="TestComponent" :props="$props" />--}}
     </div>
